@@ -2,8 +2,8 @@
 
 import os
 
-# Schedule a filesystem scan at 13:00 (GMT) (which is 11PM) every SUNDAY.
-os.system("echo \"0 13 * * sun   /scan.sh > /proc/1/fd/1 2>&1\" > /root.crontab")
+# Schedule a filesystem scan at 13:00 (GMT) (which is 11PM) every FRIDAY.
+os.system("echo \"0 13 * * fri   /scan.sh > /proc/1/fd/1 2>&1\" > /root.crontab")
 os.system("fcrontab -u root /root.crontab")
 os.system("rm /root.crontab")
 
